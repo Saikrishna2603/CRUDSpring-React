@@ -1,6 +1,6 @@
 import React,{useEffect,useState} from 'react';
 import { useNavigate,useParams } from 'react-router-dom';
-import { updateEmployee,CreateEmp,getElementById } from '../services/EmployeeService';
+import { updateEmployee,CreateEmp,getElementById } from '../services/EmployeeService'
 
 const EmplCmp=()=>{
 
@@ -23,6 +23,8 @@ const EmplCmp=()=>{
 
         console.log(employee);
         if(id){
+
+            console.log("updae emp")
             updateEmployee(id,employee).then(response=>{
                // Navigated to list employees page import useNavigate() hook from the react-router-dom
                 navigate('/employees');
@@ -30,10 +32,12 @@ const EmplCmp=()=>{
                 console.log(error);
             });
             
-        }else
+        }
+        else
         {
+            console.log("create emp")
             CreateEmp(employee).then(response=>{
-                console.log(response.data);
+                console.log("------>"+response.data);
                 navigate('/employees');
             }).catch(error=>{
                 console.log(error);
