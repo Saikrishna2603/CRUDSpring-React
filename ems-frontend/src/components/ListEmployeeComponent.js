@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react'
-import { ListEmp } from '../EmployeeService'
 import {ListEmp, DeleteEmployee} from '../services/EmployeeService'
+import { useNavigate } from 'react-router-dom'
 //USESTATE Hook
 
 /* The useState is a Hook 

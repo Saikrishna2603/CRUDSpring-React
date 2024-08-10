@@ -1,6 +1,6 @@
 import React,{useEffect,useState} from 'react';
 import { useNavigate,useParams } from 'react-router-dom';
-import { updateEmployee ,CreateEmp ,getElementById } from '../services/EmployeeService';
+import { updateEmployee,CreateEmp,getElementById } from '../services/EmployeeService';
 
 const EmplCmp=()=>{
 
