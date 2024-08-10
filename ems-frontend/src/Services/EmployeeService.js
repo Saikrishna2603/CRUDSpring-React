@@ -11,7 +11,9 @@ export const ListEmp=()=>{
 
 //Create Employee
 export const CreateEmp=(employee)=>{
-    return axios.get(Employee_Base_Rest_Api_URL+'/createEmployee/',employee);
+    console.log("BAse:"+Employee_Base_Rest_Api_URL)
+    console.log("Data:"+JSON.stringify(employee));
+    return axios.get(Employee_Base_Rest_Api_URL+'/createEmployee',employee);
 }
 
 //Find emp by ID

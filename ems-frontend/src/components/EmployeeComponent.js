@@ -5,8 +5,8 @@ import { updateEmployee,CreateEmp,getElementById } from '../services/EmployeeSer
 const EmplCmp=()=>{
 
     //We used useState() hook to create state variables in our functional components:
-    const[firstName,setFirstName]=useState('')
-    const[lastName,setLastName]=useState('')
+    const[firstname,setFirstName]=useState('')
+    const[lastname,setLastName]=useState('')
     const[email,setEmail]=useState('')
 
     const navigate=useNavigate();
@@ -19,7 +19,7 @@ const EmplCmp=()=>{
     const saveOrUpdateEmployee=(e)=>{
         e.preventDefault();
 
-        const employee={firstName,lastName,email}
+        const employee={firstname,lastname,email}
 
         console.log(employee);
         if(id){
@@ -44,8 +44,8 @@ const EmplCmp=()=>{
     useEffect(()=>{
         if(id){
             getElementById(id).then(response=>{
-                setFirstName(response.data.firstName);
-                setLastName(response.data.lastName);
+                setFirstName(response.data.firstname);
+                setLastName(response.data.lastname);
                 setEmail(response.data.email);
             }).catch(error=>{
                 console.log(error);
@@ -73,11 +73,11 @@ const EmplCmp=()=>{
                             <form>
                                 <div className="form-group mb-2">
                                     <label className="form-label">First Name:</label>
-                                    <input type="text" placeholder = "Enter first name" className="form-control" value={firstName} onChange={(e)=>setFirstName(e.target.value)}></input>
+                                    <input type="text" placeholder = "Enter first name" className="form-control" value={firstname} onChange={(e)=>setFirstName(e.target.value)}></input>
                                 </div>
                                 <div className='form-group mb-2'>
                                     <label className="form-label">Last Name:</label>
-                                    <input type="text" placeholder = "Enter last name" className="form-control" value={lastName
+                                    <input type="text" placeholder = "Enter last name" className="form-control" value={lastname
                                         } onChange={(e)=>setLastName(e.target.value)}></input>
                                     
                                 </div>

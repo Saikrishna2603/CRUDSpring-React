@@ -69,8 +69,8 @@ return(
                     employee.map(
                         emp=><tr key={emp.id}>
                         <td>{emp.id}</td>
-                        <td>{emp.firstName}</td>
-                        <td>{emp.lastName}</td>
+                        <td>{emp.firstname}</td>
+                        <td>{emp.lastname}</td>
                         <td>{emp.email}</td>
                         <td>
                                     <button className="btn btn-info" onClick={() => updateEmployee(employee.id)} >Update</button>
