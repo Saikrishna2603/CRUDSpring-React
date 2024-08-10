@@ -7,7 +7,7 @@ const EmplCmp=()=>{
     //We used useState() hook to create state variables in our functional components:
     const[firstName,setFirstName]=useState('')
     const[lastName,setLastName]=useState('')
-    const[email,setEmail]=('')
+    const[email,setEmail]=useState('')
 
     const navigate=useNavigate();
 
