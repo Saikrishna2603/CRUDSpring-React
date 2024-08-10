@@ -21,11 +21,11 @@ export const getElementById=(employeeId)=>{
 }
 
 //Update Employee
-export const updateEmployee=(employeeId) => {
-    return axios.put(Employee_Base_Rest_Api_URL+'/UpdateEmployee'+employeeId);
+export const updateEmployee=(employeeId,employee) => {
+    return axios.put(Employee_Base_Rest_Api_URL+'/UpdateEmployee/'+employeeId,employee);
 }
 
 //Delete Employee
 export const DeleteEmployee=(employeeId) => {
-    return axios.delete(Employee_Base_Rest_Api_URL+'/deleteEmployee'+employeeId);
+    return axios.delete(Employee_Base_Rest_Api_URL+'/deleteEmployee/'+employeeId);
 }

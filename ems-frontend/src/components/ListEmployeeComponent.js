@@ -73,8 +73,8 @@ return(
                         <td>{emp.lastname}</td>
                         <td>{emp.email}</td>
                         <td>
-                                    <button className="btn btn-info" onClick={() => updateEmployee(employee.id)} >Update</button>
-                                    <button className = "btn btn-danger" onClick = {() => removeEmployee(employee.id)}
+                                    <button className="btn btn-info" onClick={() => updateEmployee(emp.id)} >Update</button>
+                                    <button className = "btn btn-danger" onClick = {() => removeEmployee(emp.id)}
                                     style = {{marginLeft:"10px"}}> Delete</button>
                          </td>
                     </tr>

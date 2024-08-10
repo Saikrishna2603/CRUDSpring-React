@@ -21,10 +21,11 @@ const EmplCmp=()=>{
 
         const employee={firstname,lastname,email}
 
-        console.log(employee);
+        console.log("Employee: ",employee);
+        console.log("Employee ID :",id);
         if(id){
 
-            console.log("updae emp")
+            console.log(id)
             updateEmployee(id,employee).then(response=>{
                // Navigated to list employees page import useNavigate() hook from the react-router-dom
                 navigate('/employees');
